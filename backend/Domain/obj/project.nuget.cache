@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bfq/6yRkDuwcEw41GlWo27Fqg8CpqhuSTLpr7Fi+a33oWjE3Gsg4zMuIyRhZW/rwkc3YvvVUxCPpDhk6NV85Jw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\santi\\Documents\\Projetos\\project-confitech\\backend\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\santi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

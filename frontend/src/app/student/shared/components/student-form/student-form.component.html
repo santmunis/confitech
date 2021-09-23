@@ -1,0 +1,54 @@
+<form class="form" *ngIf="formGroup" [formGroup]="formGroup">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Ex. Nathan" formControlName="name">
+    <mat-error *ngIf="formGroup.get('name')?.hasError('required')">
+      Nome é <strong>requerido</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Sobrenome</mat-label>
+    <input matInput placeholder="Ex. Pizza" formControlName="lastName">
+    <mat-error *ngIf="formGroup.get('lastName')?.hasError('required')">
+      Sobrenome é <strong>requerido</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+    <mat-error *ngIf="formGroup.get('email')?.hasError('email')">
+      Por favor entre com um email válido
+    </mat-error>
+    <mat-error *ngIf="formGroup.get('email')?.hasError('required')">
+      Email é <strong>requerido</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Data de nascimento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="bornDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error *ngIf="formGroup.get('bornDate')?.hasError('required')">
+      Data de Nascimento é <strong>requerido</strong>
+    </mat-error>
+    <mat-error *ngIf="formGroup.get('bornDate')?.hasError('bornDate')">
+      Sua Data de Nascimento não pode ser <strong>maior ou igual a hoje requerido</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Escolaridade</mat-label>
+    <select matNativeControl formControlName="scholarity">
+      <option [value]="EnumScholarity.Infantil">Infantil</option>
+      <option [value]="EnumScholarity.Fundamental">Fundamental</option>
+      <option [value]="EnumScholarity.Medio">Medio</option>
+      <option [value]="EnumScholarity.Superior">Superior</option>
+    </select>
+    <mat-error *ngIf="formGroup.get('scholarity')?.hasError('required')">
+      Escolaridade é <strong>requerido</strong>
+    </mat-error>
+  </mat-form-field>
+</form>

@@ -1,0 +1,37 @@
+<table mat-table matSort class="mat-elevation-z8 custom" *ngIf="students && students.length > 0"
+  [dataSource]="students">
+  <ng-container matColumnDef="name">
+    <th width="30%" mat-header-cell *matHeaderCellDef> Nome </th>
+    <td width="30%" mat-cell *matCellDef="let row">
+      {{ row.name }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th width="40%" class="center-item" mat-header-cell *matHeaderCellDef> Sobrenome </th>
+    <td width="40%" class="center-item" mat-cell *matCellDef="let row">
+      {{ row.lastName }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="bornDate">
+    <th width="20%" class="center-item" mat-header-cell *matHeaderCellDef> Data de Nascimento </th>
+    <td width="20%" class="center-item" mat-cell *matCellDef="let row">
+      {{ row.bornDate | date: 'dd/MM/yyyy'}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th width="10%" class="center-item" mat-header-cell *matHeaderCellDef>Ações</th>
+    <td width="10%" class="center-item action" mat-cell *matCellDef="let row">
+      <mat-icon aria-hidden="false" aria-label="visibility" (click)="toSeeStudent.emit(row)">visibility</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="mode_edit" (click)="updateStudent.emit(row)">mode_edit</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="delete" (click)="deleteStudent.emit(row)">delete</mat-icon>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+
+  </tr>
+</table>

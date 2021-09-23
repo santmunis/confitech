@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="container">
+    <div>
+      <button mat-raised-button color="primary" (click)="createStudent()">Adicionar um estudante</button>
+    </div>
+    <div>
+      <app-student-table [students]="students" (toSeeStudent)="toSeeStudent($event)"
+        (updateStudent)="updateStudent($event)" (deleteStudent)="deleteStudent($event)">
+      </app-student-table>
+    </div>
+  </div>
+</div>
