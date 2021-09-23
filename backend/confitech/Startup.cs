@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Api.Validators;
 using confitech.Configuration;
 using Domain.Interfaces;
 using Domain.Students.Commands;
+using FluentValidation.AspNetCore;
 using Infrastructure.Data;
 using Infrastructure.Data.UnitOfWork;
 using MediatR;
@@ -33,6 +35,8 @@ namespace confitech
 
             services
                 .AddMvcCore()
+                .AddFluentValidation(fvc =>
+                    fvc.RegisterValidatorsFromAssemblyContaining<Startup>())
                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
                 .AddNewtonsoftJson()
                 .AddJsonOptions(options =>

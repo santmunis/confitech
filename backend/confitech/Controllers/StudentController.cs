@@ -20,6 +20,7 @@ namespace confitech.Controllers
         [HttpPost]
         public async Task<IActionResult> AddStudent([FromBody] CreateStudentCommand.Contract request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = await Send(request);
             return result;
 
@@ -27,6 +28,7 @@ namespace confitech.Controllers
         [HttpDelete]
         public async Task<IActionResult> DeleteStudent(DeleteStudentCommand.Contract request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = await Send(request);
             return result;
 
@@ -34,6 +36,7 @@ namespace confitech.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateStudent([FromBody] UpdateStudentCommand.Contract request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = await Send(request);
             return result;
 

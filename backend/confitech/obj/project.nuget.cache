@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "eGyVlXJLn7iqQdfsDuYQc1nT6zRopP0ICnRYR0Xe0gI/g5tv8lEktLUzkLTEp+nWs1JGWC/khMG6G6VlsUILYA==",
+  "dgSpecHash": "qTKQGqoBPvhj/v7Q1s4feoUIA/pu0W30p01dg7K9jQtbh3oBliZtRZ4b2PhTytD4UtAJYdD8BuXh0/Q6lrC3rw==",
   "success": true,
   "projectFilePath": "C:\\Users\\santi\\Documents\\Projetos\\project-confitech\\backend\\confitech\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\santi\\.nuget\\packages\\autofac\\6.2.0\\autofac.6.2.0.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.3\\fluentvalidation.aspnetcore.10.3.3.nupkg.sha512",
+    "C:\\Users\\santi\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.3\\fluentvalidation.dependencyinjectionextensions.10.3.3.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\santi\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
